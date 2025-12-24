@@ -1,0 +1,189 @@
+.local-main{
+    background-color: #1D4E1A;
+    padding-bottom: 104px;
+}
+
+.hero-advertising {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background-color: #FFECB8;
+}
+  
+.scroll {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+  
+.scroll-content {
+    display: flex;
+    gap: 40px;
+}
+  
+.scroll-content p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D4E1A;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.scroll-content svg {
+    width: 28px;
+    height: 28px;
+    fill: #1D4E1A;
+}
+
+.main-cafe {
+    display: flex;             
+    gap: 20px;                 
+    align-items: start;        
+}
+
+#map {
+    width: 588px;
+    height: 444px;
+    flex-shrink: 0; 
+}
+
+
+.cafe-block {
+    display: grid;               
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    gap: 20px;
+    flex: 1;                  
+}
+
+.cafe-blocks {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+  
+@keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 1250px) {
+     .help {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .helpers {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 1024px) {
+    .container-1 {
+        display: flex;
+        justify-content: center;
+    }
+    .main-cafe {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    #map {
+        width: 100%;
+        order: 2; 
+    }
+    
+    .cafe-block {
+        order: 1; 
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .cafe-blocks {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .main-cafe {
+        gap: 30px;
+    }
+    
+    #map {
+        height: 400px;
+    }
+    
+    .cafe-block {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .cafe-block{
+        width: 80%;
+    }
+    
+    .help {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .helpers {
+        width: 100%;
+    }
+    
+    .scroll-content {
+        gap: 20px;
+    }
+    
+    .scroll-content p {
+        font-size: 14px;
+    }
+    
+    .scroll-content svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .h1-help {
+        font-size: 28px;
+        margin: 40px 0 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        height: 350px;
+    }
+    
+    .cafe-block {
+        gap: 12px;
+    }
+    
+    .scroll-content {
+        gap: 15px;
+    }
+    
+    .scroll-content p {
+        font-size: 13px;
+        gap: 6px;
+    }
+    
+    .scroll-content svg {
+        width: 20px;
+        height: 20px;
+    }
+}

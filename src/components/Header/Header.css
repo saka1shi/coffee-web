@@ -1,0 +1,223 @@
+.head {
+  background-color: #1d4e1a;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cabin Condensed", sans-serif;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.advertising {
+  background-color: #ffecb8;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 10px;
+}
+
+.advertising p {
+  margin: 0;
+  font-size: 14px;
+  color: #1d4e1a;
+  text-align: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1d4e1a;
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.nav-link {
+  color: #ffecb8;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.desktop-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-icon, .close-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-icon.hidden {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.close-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.close-icon:not(.hidden) {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d4e1a;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.mobile-nav.active {
+  display: flex;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 25px 0;
+  gap: 20px;
+}
+
+.mobile-nav .menu-item {
+  color: #ffecb8;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 40px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 0; 
+  animation: slideInUp 0.5s ease forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  
+  .burger {
+    display: block;
+  }
+
+  .main {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .mobile-logo {
+    display: block;
+    height: 45px;
+    animation: fadeIn 0.8s ease;
+  }
+
+  .desktop-logo-container {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .advertising p {
+    font-size: 12px;
+  }
+  
+  .mobile-logo {
+    height: 40px;
+  }
+  
+  .main {
+    padding: 0 10px;
+  }
+  
+  .burger-icon, .close-icon, .burger {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .mobile-nav .menu-item {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+}

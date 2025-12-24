@@ -1,0 +1,9 @@
+.error-img{
+    background-color: #1D4E1A;
+}
+.error{
+    align-items: center;
+}
+.error img{
+    display: inline-block;
+}

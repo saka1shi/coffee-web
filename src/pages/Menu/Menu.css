@@ -1,0 +1,246 @@
+.menu {
+    background-color: #1d4e1a;
+    padding-top: 50px;
+    font-family: "Calistoga", serif;
+}
+
+.food-menu {
+    padding-top: 120px;
+}
+
+.line {
+    width: min(894px, 100%);
+    height: 1px;
+    background-color: #1d4e1a;
+}
+
+.main-menu {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.menu-drinks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 182px;
+    margin-right: 120px;
+    font-family: "Calistoga", serif;
+}
+
+.drink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 220px;
+}
+
+.drink img {
+    border-radius: 1000px;
+    width: 56px;
+    height: 56px;
+    background-color: #1d4e1a;
+}
+
+.drink h2 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #1d4e1a;
+}
+
+.coffee-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1d4e1a;
+    padding: 40px 0;
+}
+
+.coffee-text h1 {
+    font-size: clamp(1.5rem, 1.3243rem + 0.9009vw, 2rem);
+    font-weight: 400;
+    font-family: "Calistoga", serif;
+}
+
+.coffee-text p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.parent-all {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  justify-items: center; 
+  gap: 24px 40px;        
+  padding-bottom: 64px;
+}
+
+
+.main-one {
+  width: 282px;            
+  display: flex;
+  justify-content: center;  
+}
+
+.menu-drinks {
+    display: grid;
+}
+
+.child-item {
+    width: 282px;        
+}
+
+.child-item img {
+    width: 282px;
+    height: 282px;
+    border-radius: 24px;
+    background-color: #1d4e1a;
+    display: block;
+}
+
+.child-item div {
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Calistoga", serif;
+}
+
+.child-item h1,
+.child-item p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #1d4e1a;
+    white-space: nowrap;
+}
+
+.menu-advertising{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    height: 48px;
+    background-color: #FFECB8;
+}
+
+.menu-advertising p{
+    font-weight: 400;
+    font-size: 18px;
+    color: #1D4E1A;
+}
+
+.btn-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    gap: 10px;
+    font-family: "Cabin Condensed", sans-serif;
+    padding-bottom: 104px;
+}
+
+.btn-menu button{  
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid #FFECB8;
+    background-color: #1D4E1A;
+    color: #FFECB8;
+    border-radius: 1000px;
+    padding: 10px 6px 12px;
+    width: 118px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out; 
+}
+
+.btn-menu button:hover {
+    background-color: #FFECB8; 
+    color: #1D4E1A;            
+    border-color: #1D4E1A;     
+}
+
+@media (max-width: 1300px) {
+    .main-menu {
+        display: block;
+    }
+    .menu-drinks {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu-drinks {
+        display: flex;
+        flex-wrap: wrap;  
+        justify-content: space-between;
+        align-content: flex-start;
+        gap: 40px 60px;
+        margin-left: 10px;
+    }
+    .parent-all {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .main-one {
+        width: 332px;
+    }
+
+    .child-item {
+        width: 332px;        
+    }
+
+    .child-item img {
+        width: 332px;
+        height: 332px;
+        border-radius: 24px;
+        background-color: #1d4e1a;
+        display: block;
+    }
+}
+
+@media (max-width: 868px) {
+    .parent-all {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .main-one {
+        width: 352px;
+    }
+
+    .child-item {
+        width: 352px;        
+    }
+
+    .child-item img {
+        width: 352px;
+        height: 352px;
+        border-radius: 24px;
+        background-color: #1d4e1a;
+        display: block;
+    }
+}
+
+@media (max-width: 468px) {
+    .main-one {
+        width: 312px;
+    }
+
+    .child-item {
+        width: 312px;        
+    }
+
+    .child-item img {
+        width: 312px;
+        height: 312px;
+        border-radius: 24px;
+        background-color: #1d4e1a;
+        display: block;
+    }
+}

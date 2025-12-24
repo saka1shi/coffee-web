@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-weight: 400;  
+  button{
+    font-family: "Cabin Condensed", sans-serif;
+  }
+}
+
+.container{
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
